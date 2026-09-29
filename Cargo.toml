@@ -1,0 +1,17 @@
+[package]
+name = "uuidgen-rs"
+version = "1.0.0"
+edition = "2021"
+description = "A Rust clone of the GNU/util-linux uuidgen command-line tool supporting all switches"
+license = "MIT"
+repository = "https://github.com/ssproessig-thales/uuidgen-rs"
+
+[[bin]]
+name = "uuidgen"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+uuid = { version = "1", features = ["v1", "v3", "v4", "v5"] }
+rand = "0.8"
+mac_address = "1"
